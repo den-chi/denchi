@@ -2,4 +2,4 @@ title: Hello World
 date: 2013-03-04
 
 **Hello World**, from a *page*!
-![](static/images/t.png)
+![](/static/images/t.png)
