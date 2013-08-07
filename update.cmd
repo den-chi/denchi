@@ -10,7 +10,7 @@ c:\python27\python.exe web/freeze.py
 
 cd web/build
 set PATH=../../git/bin;%PATH%
-git add .
+git add --all .
 git commit -m "update website"
 git push origin master
 @pause
