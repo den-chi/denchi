@@ -1,36 +1,64 @@
 {% extends "base.html" %}
 {% block content %}
 
-      <!-- Main jumbotron for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <h1>Hello, Denchi!</h1>
-        <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+    <!-- Slider -->
+    <div class="row-2"><img class="flex-shadow" alt="" src="/static/img/shadow-bottom.png">
+      <div class="flexowlslider">
+        <ul class="owlslides">
+          <li><img class="fleft" src="/static/img/slide1.jpg" alt="">
+            <div class="owl-flex-caption-right">
+              <div class="owl-flex-bg">
+                <div class="owl-flex-border-1">
+                  <div class="owl-slide-text-1">We love to turn your ideas into Beautiful Responsive theme. <a class="owl-flex-slider-link" href="#">read more</a></div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><img class="fright" src="/static/img/slide2.jpg" alt="">
+            <div class="owl-flex-caption-left">
+              <div class="owl-flex-bg">
+                <div class="owl-flex-border-1">
+                  <div class="owl-slide-text-2">We love to turn your ideas into Beautiful Responsive theme. <a class="owl-flex-slider-link" href="#">read more</a></div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><img src="/static/img/slide3.jpg" alt=""> </li>
+        </ul>
       </div>
-
-      <div class="body-content">
-
-        <!-- Example row of columns -->
-        <div class="row">
-          <div class="col-lg-4">
-            <h2>Heading</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-          </div>
-          <div class="col-lg-4">
-            <h2>Heading</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-         </div>
-          <div class="col-lg-4">
-            <h2>最近活动</h2>
-            <ul>
-              {% for page in pages %}
-                  <li><a href="{{ url_for('page', path=page.path) }}">
-                      {{ page.meta.title }}
-                  </a>- {{ page.meta.date }}</li>
-              {% endfor %}
-            </ul>
-          </div>
+    </div>
+    <!-- Slider End -->
+    <!-- Content -->
+    <div class="container">
+      <div class="wrapper" >
+        <!-- Image and text -->
+        <div class="sixteen columns">
+          <h3 class="title ident-bot-5"> <span>Welcome to Denchi</span> </h3>
         </div>
+        <div class="four columns"> <img alt="" src="/static/img/420x236-img1.jpg">
+          <h4>Easy to customize</h4>
+          <p>Serce wisi eturna aliquam volutpat adipiscing duisac iste natus error sit voluptatem accusantium dolor.</p>
+          <a class="link" href="#">read more →</a> </div>
+        <div class="four columns"> <img alt="" src="/static/img/420x236-img2.jpg">
+          <h4>Easy to customize</h4>
+          <p>Serce wisi eturna aliquam volutpat adipiscing duisac iste natus error sit voluptatem accusantium dolor.</p>
+          <a class="link" href="#">read more →</a> </div>
+        <div class="four columns"> <img alt="" src="/static/img/420x236-img3.jpg">
+          <h4>Easy to customize</h4>
+          <p>Serce wisi eturna aliquam volutpat adipiscing duisac iste natus error sit voluptatem accusantium dolor.</p>
+          <a class="link" href="#">read more →</a> </div>
+        <div class="four columns"> <img alt="" src="/static/img/420x236-img4.jpg">
+          <h4>最近活动</h4>
+          <ul>
+            {% for page in pages %}
+                <li><a href="{{ url_for('page', path=page.path) }}">
+                    {{ page.meta.title }}
+                </a>- {{ page.meta.date }}</li>
+            {% endfor %}
+          </ul>
+          <a class="link" href="#">read more →</a> </div>
+      </div>
+    </div>
+    <!-- Content End -->
 
 {% endblock %}
