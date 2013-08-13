@@ -1,4 +1,0 @@
-title: Hello World
-date: 2014-03-04
-
-**Hello World**, from a *page*!
