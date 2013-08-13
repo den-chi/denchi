@@ -11,6 +11,7 @@ app = Flask(__name__)
 app.config.from_pyfile('settings.py')
 pages = FlatPages(app)
 freezer = Freezer(app)
+family_book, parent_map = prepare()
 
 # -----------------------------------------------------------------------------
 
@@ -24,7 +25,13 @@ def home():
 @app.route('/<path:path>/')
 def page(path):
     page = pages.get_or_404(path)
-    return render_template('page.html', page=page)
+    family = []
+    try:
+        parent_idx = parent_map['/'+page.path]
+        family = family_book[parent_idx]
+    except KeyError:
+        pass
+    return render_template('page.html', page=page, family=family)
 
 @app.route('/sitemap/')
 def site_map():
@@ -33,7 +40,6 @@ def site_map():
 # -----------------------------------------------------------------------------
 
 if __name__ == "__main__":
-    prepare()
     app.run()
 
 # -----------------------------------------------------------------------------

@@ -38,7 +38,7 @@ def make_nav(fn, extension = '.md'):
         container.append(name)
         container.append(url)
     with codecs.open(fn, 'r', encoding = default_charset) as f:
-        all_levels = []
+        family_book = []
         for line in f.readlines():
             single_level = []
             raw_terms = line.split(':')
@@ -46,20 +46,23 @@ def make_nav(fn, extension = '.md'):
             if len(raw_terms) > 1:
                 for level1_term in raw_terms[1].split(','):
                     add_term(single_level, level1_term)
-            all_levels.append(single_level)
+            family_book.append(single_level)
     # structure:
     #    [[level0_name, level0_url, level1_name, level1_url, ...], [...], ...]
-    return all_levels
+    return family_book
 
 def make_nav_page(data_fn = os.path.join(page_dir, 'navigation.md'),
     src_fn = os.path.join(template_dir, 'navigation.html'),
     dst_fn = os.path.join(template_dir, 'rendered_navigation.html')):
     with codecs.open(src_fn, 'r', encoding = default_charset) as f:
         template = jinja2.Template(f.read())
-    rendered_navigation = template.render(nav = make_nav(data_fn))
+    family_book = make_nav(data_fn)
+    rendered_navigation = template.render(nav = family_book)
     with codecs.open(dst_fn, 'w', encoding = default_charset) as f:
         f.write(rendered_navigation)
     os.remove(data_fn)
+    return family_book
+
 
 # -----------------------------------------------------------------------------
 
@@ -120,13 +123,24 @@ def make_image(target_ext = '.md'):
 
 # -----------------------------------------------------------------------------
 
+def make_parent_map(family_book):
+    parent_map = {}
+    for i, level0 in enumerate(family_book):
+        for j in xrange(3, len(level0), 2):
+            parent_map[level0[j]] = i
+    return parent_map
+
+# -----------------------------------------------------------------------------
+
 def prepare():
     for checking_dir in [image_dir, page_dir]:
         if not os.path.exists(checking_dir):
             os.makedirs(checking_dir)
     make_page_utf8()
-    make_nav_page()
+    family_book = make_nav_page()
+    parent_map = make_parent_map(family_book)
     make_image()
+    return family_book, parent_map
 
 # -----------------------------------------------------------------------------
 
