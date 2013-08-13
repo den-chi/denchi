@@ -4,8 +4,8 @@ rd web\static\img\content /s /q
 xcopy content web\pages\ /s /e
 
 set PATH=git/bin;%PATH%
-git config --global user.email "den-chi@qq.com"
-git config --global user.name "denchi"
+git config user.email "den-chi@qq.com"
+git config user.name "denchi"
 git clone https://github.com/den-chi/den-chi.github.io.git web/build
 
 c:\python27\python.exe web/freeze.py
