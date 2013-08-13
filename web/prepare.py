@@ -94,22 +94,30 @@ def make_page_utf8(target_ext = '.txt'):
 
 def make_image(target_ext = '.md'):
     def _process(fn, prefix):
-        img_regex = re.compile(r'(!.*?\[.*?\].*?)\((.*?)\)', re.I)
+        content_image_regex = re.compile(r'(!.*?\[.*?\].*?)\((.*?)\)', re.I)
+        head_image_regex = re.compile(
+            r'(head_image:)\s*(.*?\.((jpg)|(jpeg)|(gif)|(png)|(bmp)))', re.I)
         with codecs.open(fn, 'r+', encoding = default_charset) as f:
             content = f.read()
             parent_path = os.path.dirname(fn)
-            for img in img_regex.finditer(content):
-                src_name = img.group(2)
-                dst_name = '_'.join([prefix, src_name])
-                # copy image
-                src_path = os.path.join(parent_path, src_name)
-                dst_path = os.path.join(image_dir, dst_name)
-                if os.path.exists(src_path):
-                    shutil.copy(src_path, dst_path)
+            def copy_img(regex):
+                for img in regex.finditer(content):
+                    src_name = img.group(2)
+                    dst_name = '_'.join([prefix, src_name])
+                    # copy image
+                    src_path = os.path.join(parent_path, src_name)
+                    dst_path = os.path.join(image_dir, dst_name)
+                    if os.path.exists(src_path):
+                        shutil.copy(src_path, dst_path)
+            copy_img(content_image_regex)
+            copy_img(head_image_regex)
             # replace link
-            dst_link = r'\1(%s%s_\2)' % (image_root, prefix)
             f.seek(0)
-            f.write(img_regex.sub(dst_link, content))
+            dst_link = r'\1(%s%s_\2)' % (image_root, prefix)
+            content = content_image_regex.sub(dst_link, content)
+            dst_link = r'\1 %s%s_\2' % (image_root, prefix)
+            content = head_image_regex.sub(dst_link, content)
+            f.write(content)
             f.truncate()
     def _walk(directory, path_prefix=()):
         for name in os.listdir(directory):

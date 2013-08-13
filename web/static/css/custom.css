@@ -10,9 +10,8 @@ h1 a:hover {text-decoration: none;}
 }
 .company-name span {color: #0f0;}
 
-.navbar {margin-bottom: 0px;}
+.navbar {margin-bottom: -2px;}
 
-.carousel {margin-top: -2px;}
 .carousel .item {
     -webkit-transition: opacity 3s;
     -moz-transition: opacity 3s;
@@ -34,7 +33,7 @@ h1 a:hover {text-decoration: none;}
 }
 
 #footer-box {
-    margin-top: 100px;
+    margin-top: 50px;
     background: #eee;
     color: #666;
 }
@@ -48,4 +47,8 @@ h1 a:hover {text-decoration: none;}
     padding: 20px;
     text-align: center;
     border-bottom: 3px solid #0f0;
+}
+
+#page-wrapper {
+    margin: 30px 0;
 }

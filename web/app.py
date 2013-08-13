@@ -25,13 +25,17 @@ def home():
 @app.route('/<path:path>/')
 def page(path):
     page = pages.get_or_404(path)
-    family = []
     try:
         parent_idx = parent_map['/'+page.path]
         family = family_book[parent_idx]
     except KeyError:
-        pass
-    return render_template('page.html', page=page, family=family)
+        family = []
+    try:
+        head_image = page.meta['head_image']
+    except KeyError:
+        head_image = None
+    return render_template('page.html', page=page,
+        family=family, head_image=head_image)
 
 @app.route('/sitemap/')
 def site_map():

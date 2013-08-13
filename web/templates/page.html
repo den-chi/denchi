@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="row-fluid">
+    {%- if head_image -%}
+        <img src="{{ head_image }}"></img>
+    {%- endif %}
+    <div id="page-wrapper" class="row-fluid">
         <div class="span3">
             <div class="well">
                 <ul class="nav nav-list">
