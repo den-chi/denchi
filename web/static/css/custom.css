@@ -5,7 +5,7 @@ h1 a:hover {text-decoration: none;}
 
 .navbar {margin-bottom: -2px;}
 .company-name {
-    margin: 20px 0;
+    margin: 30px 0;
     font-family: 'Jockey One', sans-serif;
     font-size: 400%;
 }
@@ -31,16 +31,20 @@ h1 a:hover {text-decoration: none;}
     text-shadow: 0 1px 1px rgba(0,0,0,.4);
 }
 
-#content-box {margin: 20px 0;}
-#sitemap {
-    clear: both;
-    padding: 10%;
-    background-color: #eee;
-    color: #666;
+.in0ner {padding: 30px;}
+#footer-box {
+    margin-top: 50px;
+    background: #eee;
+    color: #333;
 }
+#footer-box .span3 {
+    padding: 40px;
+}
+
 #footer {
-    padding: 10px;
-    text-align: center;
+    background: #333;
     color: #fff;
-    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #0f0;
 }

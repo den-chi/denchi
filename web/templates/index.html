@@ -18,35 +18,61 @@
             </div>
         </div>
 
-
-        <div id="content-box" class="row-fluid">
-            <div class="span3">
-                <h3>Heading</h3>
-                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-            </div>
-            <div class="span3">
-                <h3>法规更新</h3>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-            </div>
-            <div class="span3">
-                <h3>实务动态</h3>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-           </div>
-            <div class="span3">
-                <h3>最新活动</h3>
-                <ul>
-                    {% for page in pages %}
-                    <li><a href="{{ url_for('page', path=page.path) }}">
-                        {{ page.meta.title }}
-                    </a>- {{ page.meta.date }}</li>
-                    {% endfor %}
-                </ul>
-                <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-            </div>
-        </div>
+        <ul class="thumbnails">
+            <li class="span3">
+                <div class="thumbnail">
+                    <img src="http://www.integritas.ca/wp-content/uploads/2011/02/integritas_training-300x150.jpg" alt="">
+                </div>
+            </li>
+            <li class="span3">
+                <div class="thumbnail">
+                    <img src="http://www.nycitybankruptcy.com/images/sheepshead-bay-bankruptcy-law-nyc-ny.png" alt="">
+                    <div class="caption">
+                        <h4>法规更新</h4>
+                        <p>
+                        {% for page in pages %}
+                            <span class="label">{{ page.meta.date }}</span>
+                            <a href="{{ url_for('page', path=page.path) }}">{{ page.meta.title }}</a>
+                            <br />
+                        {% endfor %}
+                        </p>
+                        <p><a class="btn btn-default" href="#">浏览全部 &raquo;</a></p>
+                    </div>
+                </div>
+            </li>
+            <li class="span3">
+                <div class="thumbnail">
+                    <img src="http://dc.vistage.com/files/2012/01/timebandits-300x150.jpg" alt="">
+                    <div class="caption">
+                        <h4>实务动态</h4>
+                        <p>
+                        {% for page in pages %}
+                            <span class="label">{{ page.meta.date }}</span>
+                            <a href="{{ url_for('page', path=page.path) }}">{{ page.meta.title }}</a>
+                            <br />
+                        {% endfor %}
+                        </p>
+                        <p><a class="btn btn-default" href="#">浏览全部 &raquo;</a></p>
+                    </div>
+                </div>
+            </li>
+            <li class="span3">
+                <div class="thumbnail">
+                    <img src="http://www.sfcomedycollege.com/wp-content/uploads/2010/12/ist2_6033889-audience-raising-hands-in-seminar-or-class-room-300x150.jpg" alt="">
+                    <div class="caption">
+                        <h4>最新活动</h4>
+                        <p>
+                        {% for page in pages %}
+                            <span class="label">{{ page.meta.date }}</span>
+                            <a href="{{ url_for('page', path=page.path) }}">{{ page.meta.title }}</a>
+                            <br />
+                        {% endfor %}
+                        </p>
+                        <p><a class="btn btn-default" href="#">浏览全部 &raquo;</a></p>
+                    </div>
+                </div>
+            </li>
+        </ul>
 
 {% endblock %}
 
