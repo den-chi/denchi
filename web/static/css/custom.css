@@ -5,6 +5,7 @@ h1 a:hover {text-decoration: none;}
 
 .navbar {margin-bottom: -2px;}
 .company-name {
+    margin: 20px 0;
     font-family: 'Jockey One', sans-serif;
     font-size: 400%;
 }
@@ -20,10 +21,7 @@ h1 a:hover {text-decoration: none;}
 .carousel .active.left {left:0;opacity:0;z-index:2;}
 .carousel .next {left:0;opacity:1;z-index:1;}
 .carousel-caption {
-    background: transparent\9;
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#BF000000,endColorstr=#BF000000)"\9; /* IE8 */
-    *filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#BF000000,endColorstr=#BF000000);   /* IE6 & 7 */
-    zoom: 1\9;
+    background: transparent url(/static/img/transparent.png) repeat scroll 0 0;
 }
 .carousel-caption h2,
 .carousel-caption p {
