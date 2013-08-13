@@ -10,6 +10,8 @@ h1 a:hover {text-decoration: none;}
 }
 .company-name span {color: #0f0;}
 
+.navbar {margin-bottom: 0px;}
+
 .carousel {margin-top: -2px;}
 .carousel .item {
     -webkit-transition: opacity 3s;
