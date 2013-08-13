@@ -1,16 +1,16 @@
-        <div class="navbar navbar-inverse navbar-static-top">
-            <div class="container">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+        <div class="navbar navbar-inverse">
+            <div class="navbar-inner">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
                 </button>
                 <div class="nav-collapse collapse">
-                    <ul class="nav navbar-nav">
+                    <ul class="nav">
                     {%- for terms in nav -%}
-                        {%- if terms|count <= 2 -%}
+                        {%- if terms|count <= 2 %}
                         <li><a href="{{ terms[1] }}">{{ terms[0] }}</a></li>
-                        {%- else -%}
+                        {%- else %}
                         <li class="dropdown">
                             <a href="{{ terms[1] }}" class="dropdown-toggle" data-toggle="dropdown">{{ terms[0] }}<b class="caret"></b></a>
                             <ul class="dropdown-menu">
@@ -19,8 +19,8 @@
                                 {%- endfor %}
                             </ul>
                         </li>
-                        {%- endif -%}
-                    {%- endfor -%}
+                        {%- endif %}
+                    {%- endfor %}
                     </ul>
                     <ul class="nav navbar-nav pull-right">
                         <li><a href="#">日本语</a></li>
