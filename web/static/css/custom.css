@@ -22,8 +22,6 @@ h1 a:hover {text-decoration: none;}
 .carousel .active.left {left:0;opacity:0;z-index:2;}
 .carousel .next {left:0;opacity:1;z-index:1;}
 .carousel-caption {
-    width: 50%;
-    margin-bottom: 20px;
     background: transparent url(/static/img/transparent.png) repeat scroll 0 0;
 }
 .carousel-caption h2,
