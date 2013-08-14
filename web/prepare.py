@@ -32,6 +32,9 @@ def make_nav(fn, extension = '.md'):
                 # Read lines until an empty line is encountered.
                 meta = u'\n'.join(itertools.takewhile(unicode.strip, lines))
                 name = yaml.safe_load(meta)['title']
+        elif '>>' in term:
+            name, url = term.split('>>')[:2]
+            name, url = name.strip(), url.strip()
         else:
             url = '#'
             name = term
@@ -41,7 +44,7 @@ def make_nav(fn, extension = '.md'):
         family_book = []
         for line in f.readlines():
             single_level = []
-            raw_terms = line.split(':')
+            raw_terms = line.split('::')
             add_term(single_level, raw_terms[0])
             if len(raw_terms) > 1:
                 for level1_term in raw_terms[1].split(','):
