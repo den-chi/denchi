@@ -1,5 +1,5 @@
 title: 专业操守及诚信
-head_image: 指南针.jpg
+head_image: compass.jpg
 
 个人诚信，公司操守，客户信任。
 

@@ -1,5 +1,5 @@
 title: 公司概览
-head_image: 京基.jpg
+head_image: Kingkey.jpg
 
 传智咨询有限公司（Denchi Advisory Co., Ltd.）（“传智”）是中国税务及商务咨询界居于领先地位的综合性咨询公司之一，为中外客户就各类境内及跨国交易提供全方位的税务及商务解决方案。
  

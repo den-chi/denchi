@@ -1,5 +1,5 @@
 title: 中国政府机构
-head_image: 天安门.jpg
+head_image: Tiananmen.jpg
 
 * 中国商务部 http://www.mofcom.gov.cn
 * 中国国家工商行政管理总局 www.saic.gov.cn
