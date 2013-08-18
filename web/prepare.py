@@ -12,8 +12,7 @@ import shutil
 app_dir         = os.path.dirname(os.path.abspath(__file__))
 page_dir        = os.path.join(app_dir, 'pages')
 template_dir    = os.path.join(app_dir, 'templates')
-image_dir       = os.path.join(app_dir, 'static', 'img', 'content')
-image_root      = '/static/img/content/'
+image_root      = '/static/img/upload/'
 default_charset = 'utf-8'
 
 # -----------------------------------------------------------------------------
@@ -96,40 +95,27 @@ def make_page_utf8(target_ext = '.txt'):
 # -----------------------------------------------------------------------------
 
 def make_image(target_ext = '.md'):
-    def _process(fn, prefix):
+    def _process(fn):
         content_image_regex = re.compile(r'(!.*?\[.*?\].*?)\((.*?)\)', re.I)
         head_image_regex = re.compile(
             r'(head_image:)\s*(.*?\.((jpg)|(jpeg)|(gif)|(png)|(bmp)))', re.I)
         with codecs.open(fn, 'r+', encoding = default_charset) as f:
             content = f.read()
-            parent_path = os.path.dirname(fn)
-            def copy_img(regex):
-                for img in regex.finditer(content):
-                    src_name = img.group(2)
-                    dst_name = '_'.join([prefix, src_name])
-                    # copy image
-                    src_path = os.path.join(parent_path, src_name)
-                    dst_path = os.path.join(image_dir, dst_name)
-                    if os.path.exists(src_path):
-                        shutil.copy(src_path, dst_path)
-            copy_img(content_image_regex)
-            copy_img(head_image_regex)
             # replace link
             f.seek(0)
-            dst_link = r'\1(%s%s_\2)' % (image_root, prefix)
+            dst_link = r'\1(%s\2)' % image_root
             content = content_image_regex.sub(dst_link, content)
-            dst_link = r'\1 %s%s_\2' % (image_root, prefix)
+            dst_link = r'\1 %s\2' % image_root
             content = head_image_regex.sub(dst_link, content)
             f.write(content)
             f.truncate()
-    def _walk(directory, path_prefix=()):
+    def _walk(directory):
         for name in os.listdir(directory):
             full_name = os.path.join(directory, name)
             if os.path.isdir(full_name):
-                _walk(full_name, path_prefix + (name,))
+                _walk(full_name)
             elif name.endswith(target_ext):
-                prefix = '_'.join(path_prefix)
-                _process(full_name, prefix)
+                _process(full_name)
     _walk(page_dir)
 
 # -----------------------------------------------------------------------------
@@ -144,9 +130,6 @@ def make_parent_map(family_book):
 # -----------------------------------------------------------------------------
 
 def prepare():
-    for checking_dir in [image_dir, page_dir]:
-        if not os.path.exists(checking_dir):
-            os.makedirs(checking_dir)
     make_page_utf8()
     family_book = make_nav_page()
     parent_map = make_parent_map(family_book)
