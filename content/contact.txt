@@ -1,4 +1,5 @@
 title: 联系我们
+head_image: 崇山峻岭.jpg
 
 传智咨询有限公司(Denchi Advisory Co., Ltd.)
 -------------------------------------------

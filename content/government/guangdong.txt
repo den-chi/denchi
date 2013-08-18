@@ -1,4 +1,5 @@
 title: 广东省政府机构
+head_image: 中山纪念堂.jpg
 
 * 广东省对外贸易经济合作厅 http://www.gddoftec.gov.cn/index.asp
 * 广东省工商行政管理局 http://www.gdgs.gov.cn

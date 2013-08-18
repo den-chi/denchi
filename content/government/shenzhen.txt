@@ -1,4 +1,5 @@
 title: 深圳市政府机构
+head_image: 深圳市民中心.jpg
 
 * 深圳市前海管理局 www.szqh.gov.cn
 * 深圳市经济贸易和信息化委员会 www.szjmxxw.gov.cn

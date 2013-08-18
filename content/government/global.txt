@@ -1,4 +1,5 @@
 title: 境外机构
+head_image: 台湾自由广场.jpg
 
 * 日本国驻华大使馆 http://www.cn.emb-japan.go.jp/index.htm
 * 日本国驻广州总领事馆 http://www.guangzhou.cn.emb-japan.go.jp/cgjp_cn/index.htm
