@@ -15,14 +15,15 @@ family_book, parent_map = prepare()
 
 # -----------------------------------------------------------------------------
 
+def get_spec_posts(_type, num = 3):
+    posts = [page for page in pages if 'date' in page.meta \
+             and 'type' in page.meta and page.meta['type'] == _type]
+    sorted_posts = sorted(posts, reverse=True,
+        key=lambda page: page.meta['date'])[:num]
+    return sorted_posts
+
 @app.route('/')
 def home():
-    def get_spec_posts(_type, num = 3):
-        posts = [page for page in pages if 'date' in page.meta \
-                 and 'type' in page.meta and page.meta['type'] == _type]
-        sorted_posts = sorted(posts, reverse=True,
-            key=lambda page: page.meta['date'])[:num]
-        return sorted_posts
     return render_template('index.html',
                             seminar_pages  = get_spec_posts('seminar'),
                             practice_pages = get_spec_posts('practice'),
@@ -40,8 +41,13 @@ def page(path):
         head_image = page.meta['head_image']
     except KeyError:
         head_image = None
+    try:
+        list_type = page.meta['list']
+        posts = get_spec_posts(list_type, 1000)
+    except KeyError:
+        posts = None
     return render_template('page.html', page=page,
-        family=family, head_image=head_image)
+        family=family, head_image=head_image, posts=posts)
 
 @app.route('/sitemap/')
 def site_map():

@@ -1,0 +1,2 @@
+title: 最新活动
+list: seminar
