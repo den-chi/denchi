@@ -45,7 +45,7 @@
                     <div class="caption">
                         <h4>法规更新</h4>
                         <p>
-                        {% for page in pages %}
+                        {% for page in law_pages %}
                             <span class="label">{{ page.meta.date }}</span>
                             <a href="{{ url_for('page', path=page.path) }}">{{ page.meta.title }}</a>
                             <br />
@@ -61,7 +61,7 @@
                     <div class="caption">
                         <h4>实务动态</h4>
                         <p>
-                        {% for page in pages %}
+                        {% for page in practice_pages %}
                             <span class="label">{{ page.meta.date }}</span>
                             <a href="{{ url_for('page', path=page.path) }}">{{ page.meta.title }}</a>
                             <br />
@@ -77,7 +77,7 @@
                     <div class="caption">
                         <h4>最新活动</h4>
                         <p>
-                        {% for page in pages %}
+                        {% for page in seminar_pages %}
                             <span class="label">{{ page.meta.date }}</span>
                             <a href="{{ url_for('page', path=page.path) }}">{{ page.meta.title }}</a>
                             <br />

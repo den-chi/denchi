@@ -1,0 +1,5 @@
+title: 周末组织爬山
+date: 2013/08/15
+type: seminar
+
+内容blablabla

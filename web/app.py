@@ -17,10 +17,16 @@ family_book, parent_map = prepare()
 
 @app.route('/')
 def home():
-    posts = [page for page in pages if 'date' in page.meta]
-    sorted_posts = sorted(posts, reverse=True,
-        key=lambda page: page.meta['date'])
-    return render_template('index.html', pages=sorted_posts)
+    def get_spec_posts(_type, num = 3):
+        posts = [page for page in pages if 'date' in page.meta \
+                 and 'type' in page.meta and page.meta['type'] == _type]
+        sorted_posts = sorted(posts, reverse=True,
+            key=lambda page: page.meta['date'])[:num]
+        return sorted_posts
+    return render_template('index.html',
+                            seminar_pages  = get_spec_posts('seminar'),
+                            practice_pages = get_spec_posts('practice'),
+                            law_pages      = get_spec_posts('law'))
 
 @app.route('/<path:path>/')
 def page(path):
