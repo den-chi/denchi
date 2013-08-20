@@ -28,7 +28,9 @@
             </ul>
             {%- else -%}
             <p>{{ page.meta.date }}</p>
-            {{ page }}
+            <div id="page-content">
+                {{ page }}
+            </div>
             {%- endif %}
         </div><!--/span-->
     </div>

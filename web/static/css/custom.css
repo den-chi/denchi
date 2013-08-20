@@ -36,6 +36,41 @@ h1 a:hover {text-decoration: none;}
     text-shadow: 0 1px 1px rgba(0,0,0,.4);
 }
 
+#page-wrapper {
+    margin: 30px 0;
+}
+
+#page-content p, #page-content li {
+    margin: 0;
+    font-size: 16px;
+    line-height: 200%;
+}
+#page-content h2 {
+    padding: 8px 35px 8px 14px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    background-color: #d9edf7;
+    border: 1px solid #bce8f1;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    font-size: 18px;
+}
+#page-content h3 {
+    padding: 2px 35px 2px 14px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    background-color: #e9fdff;
+    border: 1px solid #ccf8ff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+
 #footer-box {
     margin-top: 50px;
     background: #eee;
@@ -51,13 +86,4 @@ h1 a:hover {text-decoration: none;}
     padding: 20px;
     text-align: center;
     border-bottom: 3px solid #0f0;
-}
-
-#page-wrapper {
-    margin: 30px 0;
-}
-#page-wrapper p {
-    margin: 20px;
-    font-size: 120%;
-    line-height: 200%;
 }
