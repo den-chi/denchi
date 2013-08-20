@@ -74,6 +74,9 @@ h1 a:hover {text-decoration: none;}
 #footer-box {
     margin-top: 50px;
     background: #eee;
+    background-image: url(/static/img/upload/map_btn.png);
+    background-repeat:no-repeat;
+    background-position:right center;
     color: #666;
 }
 #footer-box .span4 {
