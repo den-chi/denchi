@@ -1,21 +1,21 @@
 title: 广东省政府机构
 head_image: Guangdong.jpg
 
-* 广东省对外贸易经济合作厅 http://www.gddoftec.gov.cn/index.asp
-* 广东省工商行政管理局 http://www.gdgs.gov.cn
-* 广东省财政厅 http://www.gdczt.gov.cn
-* 广东省国家税务局 http://portal.gd-n-tax.gov.cn
-* 广东省地方税务局 http://www.gdltax.gov.cn
-* 广州海关 http://guangzhou.customs.gov.cn
-* 黄埔海关 http://huangpu.customs.gov.cn
-* 拱北海关 http://gongbei.customs.gov.cn/publish/portal145
-* 汕头海关 http://shantou.customs.gov.cn/publish/portal151
-* 广东出入境检验检疫局 http://www.gdciq.gov.cn
-* 国家外汇管理局广东省分局 http://www.safe.gov.cn/wps/portal/guangdongfj
-* 广东省人力资源和社会保障厅 http://www.gdhrss.gov.cn
-* 广东省环境保护厅 http://www.gdep.gov.cn
-* 广东省国土资源厅 http://www.gdlr.gov.cn
-* 广东省发展和改革委员会 http://www.gddpc.gov.cn
-* 广东省科学技术厅 http://www.gdstc.gov.cn
-* 广东省经济和信息化委员会 http://www.gdei.gov.cn
-* 广东省政府台湾事务办公室 http://www.taiwan.cn/local/guangdong
+* [广东省对外贸易经济合作厅](http://www.gddoftec.gov.cn/index.asp)
+* [广东省工商行政管理局](http://www.gdgs.gov.cn)
+* [广东省财政厅](http://www.gdczt.gov.cn)
+* [广东省国家税务局](http://portal.gd-n-tax.gov.cn)
+* [广东省地方税务局](http://www.gdltax.gov.cn)
+* [广州海关](http://guangzhou.customs.gov.cn)
+* [黄埔海关](http://huangpu.customs.gov.cn)
+* [拱北海关](http://gongbei.customs.gov.cn/publish/portal145)
+* [汕头海关](http://shantou.customs.gov.cn/publish/portal151)
+* [广东出入境检验检疫局](http://www.gdciq.gov.cn)
+* [国家外汇管理局广东省分局](http://www.safe.gov.cn/wps/portal/guangdongfj)
+* [广东省人力资源和社会保障厅](http://www.gdhrss.gov.cn)
+* [广东省环境保护厅](http://www.gdep.gov.cn)
+* [广东省国土资源厅](http://www.gdlr.gov.cn)
+* [广东省发展和改革委员会](http://www.gddpc.gov.cn)
+* [广东省科学技术厅](http://www.gdstc.gov.cn)
+* [广东省经济和信息化委员会](http://www.gdei.gov.cn)
+* [广东省政府台湾事务办公室](http://www.taiwan.cn/local/guangdong)
