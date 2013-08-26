@@ -6,5 +6,10 @@
               {{ page.meta.title }}
           </a></li>
       {% endfor %}
+      {% for url in urls %}
+          <li><a href="{{ url_for('page', path=url) }}">
+              独立链接
+          </a></li>
+      {% endfor %}
     </ul>
 {% endblock %}

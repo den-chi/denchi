@@ -57,7 +57,8 @@ def page(path):
 
 @app.route('/sitemap/')
 def site_map():
-    return render_template('sitemap.html', pages=pages)
+    urls = ['/cn', '/jp']
+    return render_template('sitemap.html', pages=pages, urls=urls)
 
 # -----------------------------------------------------------------------------
 
