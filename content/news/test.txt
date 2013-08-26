@@ -1,5 +1,0 @@
-title: 测试活动发布
-date: 2013/08/05
-type: seminar
-
-这里是详细内容

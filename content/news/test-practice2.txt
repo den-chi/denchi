@@ -1,5 +1,0 @@
-title: 测试实务动态2
-date: 2013/08/08
-type: practice
-
-这里是详细内容

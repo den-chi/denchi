@@ -1,0 +1,17 @@
+title: 中国政府機関
+head_image: Tiananmen.jpg
+
+* [中国商務部](http://www.mofcom.gov.cn)
+* [中国国家工商行政管理総局](http://www.saic.gov.cn)
+* [中国財政部](http://www.mof.gov.cn)
+* [中国国家税務総局](http://www.chinatax.gov.cn)
+* [中国税関総署](http://www.customs.gov.cn)
+* [国家質量監督検験検疫総局](http://www.aqsiq.gov.cn)
+* [中国国家外貨管理局](http://www.safe.gov.cn)
+* [中国人力資源社会保障部](http://www.mohrss.gov.cn)
+* [中国環境保護部](http://www.mep.gov.cn)
+* [中国国土資源部](http://www.mlr.gov.cn)
+* [中国国家発展改革委員会](http://www.ndrc.gov.cn)
+* [中国科学技術部](http://www.most.gov.cn)
+* [中国工業情報化部](http://www.miit.gov.cn)
+* [中国国務院台湾事務弁公室](http://www.gwytb.gov.cn)

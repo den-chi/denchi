@@ -1,0 +1,21 @@
+title: 広東省政府機関
+head_image: Guangdong.jpg
+
+* [広東省対外貿易経済合作庁](http://www.gddoftec.gov.cn/index.asp)
+* [広東省工商行政管理局](http://www.gdgs.gov.cn)
+* [広東省財政庁](http://www.gdczt.gov.cn)
+* [広東省国家税務局](http://portal.gd-n-tax.gov.cn)
+* [広東省地方税務局](http://www.gdltax.gov.cn)
+* [広州税関](http://guangzhou.customs.gov.cn)
+* [黄埔税関](http://huangpu.customs.gov.cn)
+* [拱北税関](http://gongbei.customs.gov.cn/publish/portal145)
+* [汕頭税関](http://shantou.customs.gov.cn/publish/portal151)
+* [広東出入境検験検疫局](http://www.gdciq.gov.cn)
+* [国家外貨管理局広東省分局](http://www.safe.gov.cn/wps/portal/guangdongfj)
+* [広東省人力資源社会保障庁](http://www.gdhrss.gov.cn)
+* [広東省環境保護庁](http://www.gdep.gov.cn)
+* [広東省国土資源庁](http://www.gdlr.gov.cn)
+* [広東省発展改革委員会](http://www.gddpc.gov.cn)
+* [広東省科学技術庁](http://www.gdstc.gov.cn)
+* [広東省経済情報化委員会](http://www.gdei.gov.cn)
+* [広東省台湾事務弁公室](http://www.taiwan.cn/local/guangdong)

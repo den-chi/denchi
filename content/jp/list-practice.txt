@@ -1,0 +1,3 @@
+title: ÊµÎñ¶¯Ì¬
+head_image: newspaper.jpg
+list: practice
