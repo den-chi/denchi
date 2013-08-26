@@ -2,6 +2,7 @@
 {% block content %}
         <div id="carousel" class="carousel slide">
             <div class="carousel-inner">
+                {% if lang == 'cn' -%}
                 <div class="item active">
                     <img src="/static/img/upload/c1.jpg" alt=""></img>
                     <div class="carousel-caption">
@@ -30,6 +31,36 @@
                         <p>传智能够协助贵司,从而降低企业在税务、海关、外汇等方面的风险，在节约税务成本与满足合规性中取得平衡，加深企业对中国相关法规和实务操作要求的理解。</p>
                     </div>
                 </div>
+                {%- else -%}
+                <div class="item active">
+                    <img src="/static/img/upload/c1.jpg" alt=""></img>
+                    <div class="carousel-caption">
+                        <h2>企業再編</h2>
+                        <p>企業の設立、買収、譲渡、合併、分立、清算等、あらゆる企業再編には、非常に複雑な問題が絡んでいるため、経験豊かな専門家の指導が必要となります。伝智は企業再編に伴う財務、税務、法律、法規、文化と人事問題についての解決策を提供し、貴社のコンプライアンスリスクを有効的に管理し、お客様の再編を実現させるように専門的知識と誠意を尽くしてサポートいたします。</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="/static/img/upload/c2.jpg" alt=""></img>
+                    <div class="carousel-caption">
+                        <h2>伝智トレーニング</h2>
+                        <p>「人に魚を与えるより漁の仕方を教えたほうが人のためになる」という諺に示されているように、伝智は税務及びビジネス分野のトレーニングに取組み、企業再編、移転価格、税務、税関、外貨等における各分野の専門知識をお客様とシェアするよう努めています。</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="/static/img/upload/c3.jpg" alt=""></img>
+                    <div class="carousel-caption">
+                        <h2>移転価格サービス</h2>
+                        <p>伝智コンサルティング有限公司（「伝智」）は地方で豊富な経験を蓄積し、お客様に中国各地における移転価格動向を伝え、移転価格文書化、プランニング及び最適化にかかわる支援、移転価格調査への対応支援、事前確認に係る支援等の移転価格コンサルティングサービスをご提供いたします。</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="/static/img/upload/c4.jpg" alt=""></img>
+                    <div class="carousel-caption">
+                        <h2>税務及びビジネス・コンサルティングサービス</h2>
+                        <p>中国関連法規及び実務上の要求をより深く理解し、企業の税務、税関、外貨のリスクを低減させ、税務コストの節約とコンプライアンスの要求のバランスを取ることをサポートします。</p>
+                    </div>
+                </div>
+                {%- endif -%}
             </div>
         </div>
 
@@ -43,15 +74,21 @@
                 <div class="thumbnail">
                     <img src="/static/img/upload/t2.jpg" alt=""></img>
                     <div class="caption">
-                        <h4>法规更新</h4>
+                        <h4>{% if lang == 'cn' -%}法规更新{%- else -%}最新法規{%- endif -%}</h4>
                         <p>
                         {% for page in law_pages %}
-                            <span class="label">{{ page.meta.date }}</span>
-                            <a href="{{ url_for('page', path=page.path) }}">{{ page.meta.title }}</a>
+                            <span class="label">{{ page.meta.date[5:] }}</span>
+                            <a href="{{ url_for('page', path=page.path) }}">{{ page.meta.title[:9] }} {%- if page.meta.title|count > 9 -%}…{%- endif -%}</a>
                             <br />
                         {% endfor %}
                         </p>
-                        <p><a class="btn btn-default" href="{{ url_for('page', path='list-law') }}">浏览全部 &raquo;</a></p>
+                        <p><a class="btn btn-default"
+                            {% if lang == 'cn' -%}
+                            href="{{ url_for('page', path='/cn/list-seminar') }}">浏览全部
+                            {%- else -%}
+                            href="{{ url_for('page', path='/jp/list-seminar') }}">全て
+                            {%- endif -%}
+                            &raquo;</a></p>
                     </div>
                 </div>
             </li>
@@ -59,15 +96,21 @@
                 <div class="thumbnail">
                     <img src="/static/img/upload/t3.jpg" alt=""></img>
                     <div class="caption">
-                        <h4>实务动态</h4>
+                        <h4>{% if lang == 'cn' -%}实务动态{%- else -%}実務動向{%- endif -%}</h4>
                         <p>
                         {% for page in practice_pages %}
-                            <span class="label">{{ page.meta.date }}</span>
-                            <a href="{{ url_for('page', path=page.path) }}">{{ page.meta.title }}</a>
+                            <span class="label">{{ page.meta.date[5:] }}</span>
+                            <a href="{{ url_for('page', path=page.path) }}">{{ page.meta.title[:9] }} {%- if page.meta.title|count > 9 -%}…{%- endif -%}</a>
                             <br />
                         {% endfor %}
                         </p>
-                        <p><a class="btn btn-default" href="{{ url_for('page', path='list-practice') }}">浏览全部 &raquo;</a></p>
+                        <p><a class="btn btn-default"
+                            {% if lang == 'cn' -%}
+                            href="{{ url_for('page', path='/cn/list-seminar') }}">浏览全部
+                            {%- else -%}
+                            href="{{ url_for('page', path='/jp/list-seminar') }}">全て
+                            {%- endif -%}
+                            &raquo;</a></p>
                     </div>
                 </div>
             </li>
@@ -75,15 +118,21 @@
                 <div class="thumbnail">
                     <img src="/static/img/upload/t4.jpg" alt=""></img>
                     <div class="caption">
-                        <h4>最新活动</h4>
+                        <h4>{% if lang == 'cn' -%}最新活动{%- else -%}最新動向{%- endif -%}</h4>
                         <p>
                         {% for page in seminar_pages %}
-                            <span class="label">{{ page.meta.date }}</span>
-                            <a href="{{ url_for('page', path=page.path) }}">{{ page.meta.title }}</a>
+                            <span class="label">{{ page.meta.date[5:] }}</span>
+                            <a href="{{ url_for('page', path=page.path) }}">{{ page.meta.title[:9] }} {%- if page.meta.title|count > 9 -%}…{%- endif -%}</a>
                             <br />
                         {% endfor %}
                         </p>
-                        <p><a class="btn btn-default" href="{{ url_for('page', path='list-seminar') }}">浏览全部 &raquo;</a></p>
+                        <p><a class="btn btn-default"
+                            {% if lang == 'cn' -%}
+                            href="{{ url_for('page', path='/cn/list-seminar') }}">浏览全部
+                            {%- else -%}
+                            href="{{ url_for('page', path='/jp/list-seminar') }}">全て
+                            {%- endif -%}
+                            &raquo;</a></p>
                     </div>
                 </div>
             </li>

@@ -53,13 +53,11 @@ def make_nav(fn, extension = '.md'):
     #    [[level0_name, level0_url, level1_name, level1_url, ...], [...], ...]
     return family_book
 
-def make_nav_page(data_fn = os.path.join(page_dir, 'navigation.md'),
-    src_fn = os.path.join(template_dir, 'navigation.html'),
-    dst_fn = os.path.join(template_dir, 'rendered_navigation.html')):
+def make_nav_page(data_fn, src_fn, dst_fn, lang):
     with codecs.open(src_fn, 'r', encoding = default_charset) as f:
         template = jinja2.Template(f.read())
     family_book = make_nav(data_fn)
-    rendered_navigation = template.render(nav = family_book)
+    rendered_navigation = template.render(nav = family_book, lang = lang)
     with codecs.open(dst_fn, 'w', encoding = default_charset) as f:
         f.write(rendered_navigation)
     os.remove(data_fn)
@@ -131,8 +129,17 @@ def make_parent_map(family_book):
 
 def prepare():
     make_page_utf8()
-    family_book = make_nav_page()
-    parent_map = make_parent_map(family_book)
+    family_book, parent_map = {}, {}
+    for lang in ['cn', 'jp']:
+        family = make_nav_page(
+            data_fn = os.path.join(page_dir, lang, 'navigation.md'),
+            src_fn  = os.path.join(template_dir, 'navigation.html'),
+            dst_fn  = os.path.join(template_dir,
+                'rendered_navigation_%s.html' % lang),
+            lang = lang)
+        parent = make_parent_map(family)
+        family_book[lang] = family
+        parent_map[lang] = parent
     make_image()
     return family_book, parent_map
 
