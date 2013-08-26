@@ -7,5 +7,5 @@ xcopy content\image web\static\img\upload\ /s /e
 rd web\pages\image /s /q
 
 cd web
-c:\python27\python.exe app.py
-@pause
+start c:\python27\python.exe app.py
+start http://127.0.0.1:5000
