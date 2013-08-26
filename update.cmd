@@ -11,6 +11,13 @@ git config user.email "den-chi@qq.com"
 git config user.name "denchi"
 git clone https://github.com/den-chi/den-chi.github.io.git web/build
 
+cd web\build
+del * /q
+for /d %%d in (*) do (
+    rd /q/s "%%~d"
+)
+cd ..\..
+
 c:\python27\python.exe web/freeze.py
 
 cd web/build
