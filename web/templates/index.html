@@ -118,7 +118,7 @@
                 <div class="thumbnail">
                     <img src="/static/img/upload/t4.jpg" alt=""></img>
                     <div class="caption">
-                        <h4>{% if lang == 'cn' -%}最新活动{%- else -%}最新動向{%- endif -%}</h4>
+                        <h4>{% if lang == 'cn' -%}最新活动{%- else -%}イベント{%- endif -%}</h4>
                         <p>
                         {% for page in seminar_pages %}
                             <span class="label">{{ page.meta.date[5:] }}</span>
