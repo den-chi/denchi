@@ -21,6 +21,7 @@ cd ..\..
 c:\python27\python.exe web/freeze.py
 
 cd web/build
+echo denchi.cn > CNAME
 set PATH=../../git/bin;%PATH%
 git add --all .
 git commit -m "update website"
