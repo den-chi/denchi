@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
     <link href="/static/css/custom.css" rel="stylesheet" media="screen">
+    {% if lang == 'jp' %}
+    <link href="/static/css/jp.css" rel="stylesheet" media="screen">
+    {% endif %}
 </head>
 <body>
 
@@ -63,9 +66,9 @@
                     <p> <i class="icon-comment"></i> +86 755 22209446
                         <i class="icon-comment"></i> +86 755 22966926
                         <i class="icon-comment"></i> +86 755 22966929 <br />
-                        <i class="icon-envelope"></i> <a href="mailto:benjiamin.li@denchi.cn">richard.wang@denchi.cn</a>
-                        <i class="icon-envelope"></i> <a href="mailto:benjiamin.li@denchi.cn">benjiamin.li@denchi.cn</a>
-                        <i class="icon-envelope"></i> <a href="mailto:benjiamin.li@denchi.cn">crystal.yu@denchi.cn</a>
+                        <i class="icon-envelope"></i> <a href="mailto:richard.wang@denchi.cn">richard.wang@denchi.cn</a>
+                        <i class="icon-envelope"></i> <a href="mailto:benjamin.li@denchi.cn">benjamin.li@denchi.cn</a>
+                        <i class="icon-envelope"></i> <a href="mailto:crystal.yu@denchi.cn">crystal.yu@denchi.cn</a>
                     </p>
                 </div>
         </div>
@@ -86,6 +89,16 @@
     <!-- JavaScript plugins (requires jQuery) -->
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    $('.dropdown-toggle').click(function(e) {
+        e.preventDefault();
+        setTimeout($.proxy(function() {
+            if ('ontouchstart' in document.documentElement) {
+                $(this).siblings('.dropdown-backdrop').off().remove();
+            }
+        }, this), 0);
+    });
+    </script>
     {% block scripts %}{% endblock %}
   </body>
 </html>
