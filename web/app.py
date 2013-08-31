@@ -30,7 +30,7 @@ def home():
 @app.route('/<lang>/')
 def home_lang(lang):
     return render_template('index.html', lang=lang,
-                            seminar_pages  = get_spec_posts('seminar', lang),
+                            event_pages  = get_spec_posts('event', lang),
                             practice_pages = get_spec_posts('practice', lang),
                             law_pages      = get_spec_posts('law', lang))
 

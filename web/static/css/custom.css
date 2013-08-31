@@ -45,6 +45,11 @@ h1 a:hover {text-decoration: none;}
     font-size: 16px;
     line-height: 200%;
 }
+
+#page-content p {
+    margin: 20px;
+}
+
 #page-content h2 {
     padding: 8px 35px 8px 14px;
     margin-top: 20px;
@@ -89,4 +94,8 @@ h1 a:hover {text-decoration: none;}
     padding: 20px;
     text-align: center;
     border-bottom: 3px solid #0f0;
+}
+
+.nav-header {
+    font-size: 15px;
 }

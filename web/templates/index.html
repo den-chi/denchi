@@ -120,7 +120,7 @@
                     <div class="caption">
                         <h4>{% if lang == 'cn' -%}最新活动{%- else -%}イベント{%- endif -%}</h4>
                         <p>
-                        {% for page in seminar_pages %}
+                        {% for page in event_pages %}
                             <span class="label">{{ page.meta.date[5:] }}</span>
                             <a href="{{ url_for('page', path=page.path) }}">{{ page.meta.title[:9] }} {%- if page.meta.title|count > 9 -%}…{%- endif -%}</a>
                             <br />
@@ -128,9 +128,9 @@
                         </p>
                         <p><a class="btn btn-default"
                             {% if lang == 'cn' -%}
-                            href="{{ url_for('page', path='/cn/list-seminar') }}">浏览全部
+                            href="{{ url_for('page', path='/cn/list-event') }}">浏览全部
                             {%- else -%}
-                            href="{{ url_for('page', path='/jp/list-seminar') }}">全て
+                            href="{{ url_for('page', path='/jp/list-event') }}">全て
                             {%- endif -%}
                             &raquo;</a></p>
                     </div>
