@@ -16,15 +16,9 @@ h1 a:hover {text-decoration: none;}
 
 .navbar {margin-bottom: -2px;}
 
-.carousel .item {
-    -webkit-transition: opacity 3s;
-    -moz-transition: opacity 3s;
-    -ms-transition: opacity 3s;
-    -o-transition: opacity 3s;
-    transition: opacity 3s;
+.carousel-control {
+    border: none;
 }
-.carousel .active.left {left:0;opacity:0;z-index:2;}
-.carousel .next {left:0;opacity:1;z-index:1;}
 .carousel-caption {
     background: transparent url(/static/img/transparent.png) repeat scroll 0 0;
 }
