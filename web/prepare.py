@@ -127,6 +127,33 @@ def make_parent_map(family_book):
 
 # -----------------------------------------------------------------------------
 
+def make_new_line(target_ext = '.md'):
+    def _walk(directory):
+        for name in os.listdir(directory):
+            full_name = os.path.join(directory, name)
+            if os.path.isdir(full_name):
+                _walk(full_name)
+            elif name.endswith(target_ext):
+                content = None
+                with open(full_name, 'r') as f:
+                    pre_content = []
+                    content = []
+                    start = False
+                    for line in f:
+                        if ': ' not in line:
+                            start = True
+                        if start:
+                            content.append(line)
+                        else:
+                            pre_content.append(line)
+                    content=''.join([''.join(pre_content),'\n'.join(content)])
+                if content:
+                    with open(full_name, 'w') as f:
+                        f.write(content)
+    _walk(page_dir)
+
+# -----------------------------------------------------------------------------
+
 def prepare():
     make_page_utf8()
     family_book, parent_map = {}, {}
@@ -140,6 +167,7 @@ def prepare():
         parent = make_parent_map(family)
         family_book[lang] = family
         parent_map[lang] = parent
+    make_new_line()
     make_image()
     return family_book, parent_map
 

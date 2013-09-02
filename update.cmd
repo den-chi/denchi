@@ -22,7 +22,7 @@ if exist web\build (
     git config --global user.name "denchi"
 git clone https://github.com/den-chi/den-chi.github.io.git web/build
 )
-@pause
+
 if not exist web\build (
     echo 啊，好像更新失败了，上面写着什么呢？请截图发到user@ufoym.com吧！
     @pause
@@ -43,6 +43,9 @@ echo denchi.cn > CNAME
 set PATH=../../git/bin;%PATH%
 git add --all .
 git commit -m "update website"
-echo 如果上面显示nothing to commit，表明本次更新失败了。请截图发到user@ufoym.com吧！
+echo 如果上面显示nothing to commit，表明本次不会更新任何内容。
+echo 如果您确实修改了网站内容但仍然显示nothing to commit，请截图发到user@ufoym.com吧
+
+echo 如果上面没什么问题，那么现在请输入den-chi，然后再输入相应的密码
 git push origin master
 @pause
