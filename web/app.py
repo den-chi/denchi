@@ -15,7 +15,7 @@ family_book, parent_map = prepare()
 
 # -----------------------------------------------------------------------------
 
-def get_spec_posts(_type, lang, num = 3):
+def get_spec_posts(_type, lang, num = 5):
     posts = [page for page in pages if page.path.startswith(lang) \
                 and 'date' in page.meta \
                 and 'type' in page.meta and page.meta['type'] == _type]
