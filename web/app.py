@@ -42,6 +42,7 @@ def page(path):
         parent_idx = parent_map[lang]['/'+page.path]
         family = family_book[lang][parent_idx]
     except KeyError:
+        print path
         family = [page.meta['title']]
     try:
         head_image = page.meta['head_image']

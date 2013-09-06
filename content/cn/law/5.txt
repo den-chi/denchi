@@ -1,1 +1,6 @@
 title: 外汇法规
+
+[中华人民共和国外汇管理条例](/cn/law/waihuiguanlitiaoli)
+[外债管理暂行办法](cn/law/waizhaiguanli)
+[关于货物贸易外汇管理制度改革的公告](cn/law/201201)
+[国家外汇管理局关于印发服务贸易外汇管理法规的通知](/cn/law/201330)

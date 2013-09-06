@@ -1,1 +1,5 @@
 title: 移転価格
+
+[関連企業間取引の税務管理規程](/jp/law/2004143)
+[関連企業間の業務取引移転価格税収管理の関連問題に関する通知](/jp/law/2006901)
+[特別納税調整実施弁法（試行）](jp/law/tebienashuitiaozheng)

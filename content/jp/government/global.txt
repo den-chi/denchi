@@ -3,6 +3,6 @@ head_image: Japanese_diet.jpg
 
 * [在中国日本国大使館](http://www.cn.emb-japan.go.jp/index.htm)
 * [在広州日本国総領事館](http://www.guangzhou.cn.emb-japan.go.jp/cgjp_cn/index.htm)
-* [日本貿易振興機構（中国](http://www.jetro.go.jp/china/)
+* [日本貿易振興機構（中国）](http://www.jetro.go.jp/china/)
 * [財団法人海峡交流基金会](http://www.sef.org.tw)
 * [行政院大陸委員会香港事務局](http://www.taiwaninfo.org)

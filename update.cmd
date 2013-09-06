@@ -20,7 +20,7 @@ if exist web\build (
 ) else (
     git config --global user.email "den-chi@qq.com"
     git config --global user.name "denchi"
-git clone https://github.com/den-chi/den-chi.github.io.git web/build
+    git clone https://github.com/den-chi/den-chi.github.io.git web/build
 )
 
 if not exist web\build (
@@ -43,9 +43,6 @@ echo denchi.cn > CNAME
 set PATH=../../git/bin;%PATH%
 git add --all .
 git commit -m "update website"
-echo 如果上面显示nothing to commit，表明本次不会更新任何内容。
-echo 如果您确实修改了网站内容但仍然显示nothing to commit，请截图发到user@ufoym.com吧
-
 echo 如果上面没什么问题，那么现在请输入den-chi，然后再输入相应的密码
 git push origin master
 @pause

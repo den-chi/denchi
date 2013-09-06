@@ -1,1 +1,5 @@
 title: 其他法规
+
+[中华人民共和国发票管理办法(2010)](/cn/law/fapiao)
+[中华人民共和国发票管理办法实施细则(2011)](/cn/law/fapiaoxize)
+[中华人民共和国会计法](/cn/law/kuaijifa)

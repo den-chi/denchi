@@ -67,18 +67,12 @@ def make_nav_page(data_fn, src_fn, dst_fn, lang):
 # -----------------------------------------------------------------------------
 
 def convert_charset(src_fn, dst_fn,
-    src_formats = [locale.getpreferredencoding(), 'ascii'],
+    src_format = locale.getpreferredencoding(),
     dst_format = default_charset):
-    for src_format in src_formats:
-        try:
-            with codecs.open(src_fn, 'r', src_format) as src_f:
-                with codecs.open(dst_fn, 'w', dst_format) as dst_f:
-                    for line in src_f:
-                        dst_f.write(line)
-                    return True
-        except UnicodeDecodeError:
-            pass
-    return False
+    with codecs.open(src_fn, 'r', src_format, errors='ignore') as src_f:
+        with codecs.open(dst_fn, 'w', dst_format) as dst_f:
+            for line in src_f:
+                dst_f.write(line)
 
 def make_page_utf8(target_ext = '.txt'):
     def _walk(directory):
