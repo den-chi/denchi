@@ -7,7 +7,9 @@
         <div class="span3">
             <div class="well">
                 <ul class="nav nav-list">
-                    <li class="nav-header">{{ family[0] }}</li>
+                    <li class="nav-header">
+                        <a href="{{ family[1] }}">{{ family[0] }}</a>
+                    </li>
                     {%- if family|count > 2 -%}
                         <li class="divider"></li>
                         {%- for item in family[2::2] -%}

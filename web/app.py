@@ -38,12 +38,18 @@ def home_lang(lang):
 def page(path):
     lang = path.split('/')[0]
     page = pages.get_or_404(path)
+    family = None
     try:
         parent_idx = parent_map[lang]['/'+page.path]
         family = family_book[lang][parent_idx]
     except KeyError:
-        print path
-        family = [page.meta['title']]
+        if 'type' in page.meta:
+            list_path = '%s/list-%s' % (lang, page.meta['type'])
+            list_page = pages.get(list_path)
+            if list_page:
+                family = [list_page.meta['title'], '/'+list_page.path]
+        if family is None:
+            family = [page.meta['title'], '/'+page.path]
     try:
         head_image = page.meta['head_image']
     except KeyError:
