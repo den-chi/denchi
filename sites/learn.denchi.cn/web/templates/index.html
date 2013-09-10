@@ -71,7 +71,7 @@
                     <div class="caption">
                         <h4>{% if lang == 'cn' -%}最新课件{%- else -%}最新のコース{%- endif -%}</h4>
                         <p>
-                        {% for page in law_pages %}
+                        {% for page in courseware_pages %}
                             <span class="label">{{ page.meta.date[5:] }}</span>
                             <a href="{{ url_for('page', path=page.path) }}">{{ page.meta.title[:9] }} {%- if page.meta.title|count > 9 -%}…{%- endif -%}</a>
                             <br />
@@ -93,7 +93,7 @@
                     <div class="caption">
                         <h4>{% if lang == 'cn' -%}最受欢迎课件{%- else -%}大人気のコース{%- endif -%}</h4>
                         <p>
-                        {% for page in practice_pages %}
+                        {% for page in popular_courseware_pages %}
                             <span class="label">{{ page.meta.date[5:] }}</span>
                             <a href="{{ url_for('page', path=page.path) }}">{{ page.meta.title[:9] }} {%- if page.meta.title|count > 9 -%}…{%- endif -%}</a>
                             <br />
