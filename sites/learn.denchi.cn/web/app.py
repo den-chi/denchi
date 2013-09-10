@@ -54,11 +54,15 @@ def page(path):
     except KeyError:
         head_image = None
     try:
+        redirect = page.meta['redirect']
+    except KeyError:
+        redirect = None
+    try:
         list_type = page.meta['list']
         posts = get_spec_posts(list_type, lang, 1000)
     except KeyError:
         posts = None
-    return render_template('page.html', page=page,
+    return render_template('page.html', page=page, redirect=redirect,
         family=family, head_image=head_image, posts=posts, lang=lang)
 
 @app.route('/sitemap/')
