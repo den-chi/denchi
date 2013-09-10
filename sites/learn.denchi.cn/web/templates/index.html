@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+{% block content %}
+        <div id="carousel" class="carousel slide">
+            <div class="carousel-inner">
+                {% if lang == 'cn' -%}
+                <div class="item active">
+                    <img src="/static/img/upload/c1.jpg" alt=""></img>
+                    <div class="carousel-caption">
+                        <h2>税务及商务基础知识培训</h2>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="/static/img/upload/c2.jpg" alt=""></img>
+                    <div class="carousel-caption">
+                        <h2>企业重组专题</h2>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="/static/img/upload/c3.jpg" alt=""></img>
+                    <div class="carousel-caption">
+                        <h2>法规、实务更新及案例分析</h2>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="/static/img/upload/c4.jpg" alt=""></img>
+                    <div class="carousel-caption">
+                        <h2>想了解最新的培训内容和研讨会资讯？请通过“在线咨询”联系我们，成为传智的尊贵会员！</h2>
+                    </div>
+                </div>
+                {%- else -%}
+                <div class="item active">
+                    <img src="/static/img/upload/c1.jpg" alt=""></img>
+                    <div class="carousel-caption">
+                        <h2>税務及びビジネス基本知識のトレーニング</h2>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="/static/img/upload/c2.jpg" alt=""></img>
+                    <div class="carousel-caption">
+                        <h2>企業再編</h2>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="/static/img/upload/c3.jpg" alt=""></img>
+                    <div class="carousel-caption">
+                        <h2>最新法規、実務動向及びケーススタディー</h2>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="/static/img/upload/c4.jpg" alt=""></img>
+                    <div class="carousel-caption">
+                        <h2>最新なトレーニングとセミナー情報をご希望？「オンライン相談」で伝智と連絡、VIPになりましょう！</h2>
+                    </div>
+                </div>
+                {%- endif -%}
+            </div>
+            <!-- Carousel nav -->
+            <a class="carousel-control left" href="#carousel" data-slide="prev">&lsaquo;</a>
+            <a class="carousel-control right" href="#carousel" data-slide="next">&rsaquo;</a>
+        </div>
+
+        <ul class="thumbnails">
+            <li class="span4">
+                <div class="thumbnail">
+                    <img src="/static/img/upload/t1.jpg" alt=""></img>
+                </div>
+            </li>
+            <li class="span4">
+                <div class="thumbnail">
+                    <img src="/static/img/upload/t2.jpg" alt=""></img>
+                    <div class="caption">
+                        <h4>{% if lang == 'cn' -%}最新课件{%- else -%}最新のコース{%- endif -%}</h4>
+                        <p>
+                        {% for page in law_pages %}
+                            <span class="label">{{ page.meta.date[5:] }}</span>
+                            <a href="{{ url_for('page', path=page.path) }}">{{ page.meta.title[:9] }} {%- if page.meta.title|count > 9 -%}…{%- endif -%}</a>
+                            <br />
+                        {% endfor %}
+                        </p>
+                        <p><a class="btn btn-default"
+                            {% if lang == 'cn' -%}
+                            href="{{ url_for('page', path='/cn/list-courseware') }}">浏览全部
+                            {%- else -%}
+                            href="{{ url_for('page', path='/jp/list-courseware') }}">全て
+                            {%- endif -%}
+                            &raquo;</a></p>
+                    </div>
+                </div>
+            </li>
+            <li class="span4">
+                <div class="thumbnail">
+                    <img src="/static/img/upload/t3.jpg" alt=""></img>
+                    <div class="caption">
+                        <h4>{% if lang == 'cn' -%}最受欢迎课件{%- else -%}大人気のコース{%- endif -%}</h4>
+                        <p>
+                        {% for page in practice_pages %}
+                            <span class="label">{{ page.meta.date[5:] }}</span>
+                            <a href="{{ url_for('page', path=page.path) }}">{{ page.meta.title[:9] }} {%- if page.meta.title|count > 9 -%}…{%- endif -%}</a>
+                            <br />
+                        {% endfor %}
+                        </p>
+                        <p><a class="btn btn-default"
+                            {% if lang == 'cn' -%}
+                            href="{{ url_for('page', path='/cn/list-popular-courseware') }}">浏览全部
+                            {%- else -%}
+                            href="{{ url_for('page', path='/jp/list-popular-courseware') }}">全て
+                            {%- endif -%}
+                            &raquo;</a></p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript">
+    !function ($) {
+        $(function(){
+            $('#carousel').carousel()
+        })
+    }(window.jQuery)
+    </script>
+{% endblock %}

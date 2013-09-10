@@ -1,0 +1,95 @@
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Microsoft YaHei UI','Microsoft YaHei',SimSun,'Segoe UI',Tahoma,Helvetica,Sans-Serif;
+}
+h1 a:hover {text-decoration: none;}
+
+#header {
+    margin: 30px 0;
+}
+#company-name a {
+    color: #666;
+    letter-spacing: 6px;
+    text-decoration: none;
+}
+#language {margin: 5px;}
+#language a {color: #fff;}
+
+.navbar {margin-bottom: -2px;}
+
+.carousel-control {
+    border: none;
+}
+.carousel-caption {
+    background: transparent url(/static/img/transparent.png) repeat scroll 0 0;
+}
+.carousel-caption h2,
+.carousel-caption p {
+    margin: 20px;
+    line-height: 1.25;
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(0,0,0,.4);
+}
+
+#page-wrapper {
+    margin: 30px 0;
+}
+
+#page-content p, #page-content li {
+    margin: 0;
+    font-size: 16px;
+    line-height: 200%;
+}
+
+#page-content p {
+    margin: 20px 0 20px 0;
+}
+
+#page-content h2 {
+    padding: 8px 35px 8px 14px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    background-color: #d9edf7;
+    border: 1px solid #bce8f1;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    font-size: 18px;
+}
+#page-content h3 {
+    padding: 2px 35px 2px 14px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    background-color: #e9fdff;
+    border: 1px solid #ccf8ff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+
+#footer-box {
+    margin-top: 50px;
+    background: #eee;
+    background-image: url(/static/img/upload/map_btn.png);
+    background-repeat:no-repeat;
+    background-position:right center;
+    color: #666;
+}
+#footer-box .span8 {
+    padding: 30px;
+}
+
+#footer {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #0f0;
+}
+
+.nav-header {
+    font-size: 15px;
+}

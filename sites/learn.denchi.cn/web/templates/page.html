@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+    {%- if head_image -%}
+        <img src="{{ head_image }}"></img>
+    {%- endif %}
+    <div id="page-wrapper" class="row-fluid">
+        <div class="span3">
+            <div class="well">
+                <ul class="nav nav-list">
+                    <li class="nav-header">
+                        <a href="{{ family[1] }}">{{ family[0] }}</a>
+                    </li>
+                    {%- if family|count > 2 -%}
+                        <li class="divider"></li>
+                        {%- for item in family[2::2] -%}
+                        <li><a href="{{ family[loop.index*2+1] }}">{{ item }}</a></li>
+                        {%- endfor %}
+                    {%- endif %}
+                </ul>
+            </div>
+        </div><!--/span-->
+        <div class="span9">
+            <h2>{{ page.meta.title }}</h2>
+            <hr />
+            {%- if posts -%}
+            <ul>
+                {%- for post in posts -%}
+                <li><a href="{{ url_for('page', path=post.path) }}">{{ post.meta.title }}</a></li>
+                {%- endfor %}
+            </ul>
+            {%- else -%}
+            <p>{{ page.meta.date }}</p>
+            <div id="page-content">
+                {{ page }}
+            </div>
+            {%- endif %}
+        </div><!--/span-->
+    </div>
+{% endblock %}
+
+
+    {% block scripts %}
+    <script type="text/javascript">
+        $(document.links).filter(function() {
+            return this.hostname != window.location.hostname;
+        }).attr('target', '_blank');
+    </script>
+    {% endblock %}

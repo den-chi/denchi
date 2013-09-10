@@ -1,0 +1,6 @@
+*.py[co]
+scripts
+build
+pages
+static/img/content
+templates/rendered_*.html

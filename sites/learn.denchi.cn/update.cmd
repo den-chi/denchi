@@ -9,8 +9,8 @@ xcopy content web\pages\ /s /e > nul
 xcopy content\image web\static\img\upload\ /s /e > nul
 rd web\pages\image /s /q > nul
 
-set PATH=git/bin;%PATH%
 set PATH=../../git/bin;%PATH%
+set PATH=../../../../git/bin;%PATH%
 echo 正在同步最新版本的文件...
 if exist web\build (
     cd web\build
@@ -20,7 +20,7 @@ if exist web\build (
 ) else (
     git config --global user.email "den-chi@qq.com"
     git config --global user.name "denchi"
-    git clone https://github.com/den-chi/den-chi.github.io.git web/build
+    git clone https://github.com/den-chi-learn/den-chi-learn.github.io.git web/build
 )
 
 if not exist web\build (
@@ -39,8 +39,8 @@ cd ..\..
 c:\python27\python.exe web/freeze.py
 
 cd web/build
-echo denchi.cn > CNAME
-set PATH=../../git/bin;%PATH%
+echo learn.denchi.cn > CNAME
+set PATH=../../../../git/bin;%PATH%
 git add --all .
 git commit -m "update website"
 echo 如果上面没什么问题，那么现在请输入den-chi，然后再输入相应的密码
