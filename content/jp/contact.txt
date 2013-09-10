@@ -1,7 +1,7 @@
 title: お問合せ
 
-伝智コンサルティング有限公司(Denchi Advisory Co., Ltd.)
--------------------------------------------
+###伝智コンサルティング有限公司(Denchi Advisory Co., Ltd.)###
+
 
 ![](map.png)
 
@@ -18,8 +18,8 @@ Eアドレス：
 [benjamin.li@denchi.cn](mailto:benjamin.li@denchi.cn);
 [crystal.yu@denchi.cn](mailto:crystal.yu@denchi.cn)
 
-関連機構
---------
+###関連機構###
+
 新日コンサルティング有限公司
 
 New Sun Consulting Co., Limited

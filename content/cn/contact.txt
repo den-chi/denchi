@@ -1,7 +1,7 @@
 title: 联系我们
 
-传智咨询有限公司(Denchi Advisory Co., Ltd.)
--------------------------------------------
+###传智咨询有限公司(Denchi Advisory Co., Ltd.)###
+
 
 ![](map.png)
 
@@ -17,8 +17,8 @@ title: 联系我们
 [benjamin.li@denchi.cn](mailto:benjamin.li@denchi.cn);
 [crystal.yu@denchi.cn](mailto:crystal.yu@denchi.cn)
 
-关联机构
---------
+###关联机构###
+
 新日咨询有限公司
 
 New Sun Consulting Co., Limited
