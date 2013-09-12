@@ -1,5 +1,5 @@
-title: 课件2
+title: 企業設立
 date: 2013/09/10
-type: popular_courseware
+type: courseware
 
-hello denchi
+ただいま作成中でございます

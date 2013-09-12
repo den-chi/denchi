@@ -1,4 +1,5 @@
 title: 培训方式
+head_image: river.jpg
 
 
 * 远程课件培训（VCD）

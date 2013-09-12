@@ -1,5 +1,5 @@
-title: 课件1
+title: 個人所得税
 date: 2013/09/01
 type: courseware
 
-hello denchi
+ただいま作成中でございます
