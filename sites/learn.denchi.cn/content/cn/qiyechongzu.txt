@@ -1,4 +1,5 @@
 title: 企业重组专题
+head_image: c2.jpg
 
 
 ###一、公司设立###

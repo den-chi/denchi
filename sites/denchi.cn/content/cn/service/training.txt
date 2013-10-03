@@ -1,7 +1,2 @@
 title: 传智培训
-
-* 企业重组
-* 税务
-* 转移定价
-* 海关
-* 外汇
+redirect: http://www.learn.denchi.cn

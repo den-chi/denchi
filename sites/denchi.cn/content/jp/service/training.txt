@@ -1,7 +1,2 @@
 title: 伝智トレーニング
-
-* 企業再編
-* 税務
-* 移転価格
-* 税関
-* 外貨
+redirect: http://www.learn.denchi.cn/jp

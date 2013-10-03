@@ -1,4 +1,6 @@
 title: 企業再編
+head_image: c2.jpg
+
 
 ###一、企業設立###
 ###二、企業変更###

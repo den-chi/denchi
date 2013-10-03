@@ -1,5 +1,5 @@
 会社概要:: /jp/introduction/company, /jp/introduction/group, /jp/introduction/concepts, /jp/introduction/different, /jp/introduction/team, /jp/introduction/professional
-サービス:: /jp/service/establish, /jp/service/training, /jp/service/price, /jp/service/tax
+サービス:: /jp/service/establish, 伝智トレーニング>>http://www.learn.denchi.cn/jp, /jp/service/price, /jp/service/tax
 /jp/list-event
 法規集:: /jp/law/1, /jp/law/2, /jp/law/3, /jp/law/4, /jp/law/5, /jp/law/6, /jp/law/7
 政府リンク集:: /jp/government/china, /jp/government/guangdong, /jp/government/shenzhen, /jp/government/global
