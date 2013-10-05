@@ -5,21 +5,21 @@ title: 企业重组方式
 
 * 来料加工厂转型为独资公司
 * 常驻代表机构变更为独资公司、分公司
-* 子公司变更为分公司
-* 分公司变更为子公司
+* [子公司变更为分公司](/cn/reconstruct/fengongsi)
+* [分公司变更为子公司](/cn/reconstruct/farengongsisheli)
 
 ###改善或扩大经营###
 
-* 收购股权（以链接形式显示，链接至4.股权转让页面）
+* [收购股权](/cn/reconstruct/guquanzhuanrang)
 * 收购资产
-* 合并（以链接形式显示，链接至3.合并）
-* 新设投资性、控股公司（以链接形式显示，链接至6.设立法人公司）
+* [合并](/cn/reconstruct/hebing)
+* [新设投资性、控股公司](/cn/reconstruct/farengongsisheli)
 * 增资
 * 搬迁；等
 
 ###缩小投资规模###
 
-* 清算（以链接形式显示，链接至2.清算）
-* 转让股权（以链接形式显示，链接至4.股权转让）
+* [清算](/cn/reconstruct/qingsuan)
+* [转让股权](/cn/reconstruct/guquanzhuanrang)
 * 转让资产+注销
-* 减资（以链接形式显示，链接到7.变更）
+* [减资](/cn/reconstruct/biangeng)
