@@ -33,6 +33,29 @@
             <div id="page-content">
                 {{ page }}
             </div>
+
+            <hr />
+            <div class="row-fluid">
+                <div class="span4">
+                    {%- if family.index('/'+page.path) - 3 > 1 -%}
+                    <a href="{{ family[family.index('/'+page.path) - 2] }}" class="pull-left">
+                        <span class="label"><i class="icon-arrow-left icon-white"></i> {{ family[family.index('/'+page.path) - 3] }}</span>
+                    </a>
+                    {%- endif %}
+                </div>
+                <div class="span4 text-center">
+                    <a href="/{{lang}}/">
+                        <span class="label"><i class="icon-arrow-up icon-white"></i> top</span>
+                    </a>
+                </div>
+                <div class="span4">
+                    {%- if family.index('/'+page.path) + 2 < family|count -%}
+                    <a href="{{ family[family.index('/'+page.path) + 2] }}" class="pull-right">
+                        <span class="label">{{ family[family.index('/'+page.path) + 1] }} <i class="icon-arrow-right icon-white"></i></span>
+                    </a>
+                    {%- endif %}
+                </div>
+            </div>
             {%- endif %}
         </div><!--/span-->
     </div>
