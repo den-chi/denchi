@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+    <ul>
+      {% for page in pages %}
+          <li><a href="{{ url_for('page', path=page.path) }}">
+              {{ page.meta.title }}
+          </a></li>
+      {% endfor %}
+      {% for url in urls %}
+          <li><a href="{{ url_for('page', path=url) }}">
+              独立链接
+          </a></li>
+      {% endfor %}
+    </ul>
+{% endblock %}
