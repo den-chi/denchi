@@ -29,9 +29,7 @@ def home():
 
 @app.route('/<lang>/')
 def home_lang(lang):
-    return render_template('index.html', lang=lang,
-        courseware_pages         = get_spec_posts('courseware', lang),
-        popular_courseware_pages = get_spec_posts('popular_courseware', lang))
+    return render_template('index.html', lang=lang)
 
 @app.route('/<path:path>/')
 def page(path):

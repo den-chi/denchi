@@ -1,0 +1,25 @@
+title: 企業再編方式
+
+
+###事業組織の変更###
+
+* 来料加工工場の独資化
+* 駐在員事務所が現地法人や分公司への変更
+* [子会社が分公司への変更](/jp/reconstruct/fengongsi)
+* [分公司が子会社への変更](/jp/reconstruct/farengongsisheli)
+
+###改善或は経営拡大###
+
+* [持分買収](/jp/reconstruct/guquanzhuanrang)
+* 資産買収
+* [合併](/jp/reconstruct/hebing)
+* [持株、統括会社の新設](/jp/reconstruct/farengongsisheli)
+* 増資
+* 移転等
+
+###投資規模の縮小###
+
+* [清算](/jp/reconstruct/qingsuan)
+* [持分譲渡](/jp/reconstruct/guquanzhuanrang)
+* 資産譲渡+閉鎖
+* [減資](/jp/reconstruct/biangeng)
