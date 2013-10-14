@@ -103,6 +103,11 @@
         }, this), 0);
     });
     </script>
+    <script type="text/javascript">
+        $(document.links).filter(function() {
+            return this.hostname != window.location.hostname;
+        }).attr('target', '_blank');
+    </script>
     {% block scripts %}{% endblock %}
   </body>
 </html>

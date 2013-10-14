@@ -1,2 +1,2 @@
 title: ´«ÖÇÅàÑµ
-redirect: http://www.learn.denchi.cn
+redirect: http://learn.denchi.cn

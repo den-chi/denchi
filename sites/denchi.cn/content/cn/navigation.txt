@@ -1,5 +1,5 @@
 公司简介:: /cn/introduction/company, /cn/introduction/group, /cn/introduction/concepts, /cn/introduction/different, /cn/introduction/team, /cn/introduction/professional
-业务概况:: /cn/service/establish, 传智培训>>http://www.learn.denchi.cn, /cn/service/price, /cn/service/tax
+业务概况:: 企业重组>>http://saihen.denchi.cn, 传智培训>>http://learn.denchi.cn, /cn/service/price, /cn/service/tax
 /cn/list-event
 法规库:: /cn/law/1, /cn/law/2, /cn/law/3, /cn/law/4, /cn/law/5, /cn/law/6, /cn/law/7
 政府机构链接:: /cn/government/china, /cn/government/guangdong, /cn/government/shenzhen, /cn/government/global
