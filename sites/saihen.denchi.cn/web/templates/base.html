@@ -24,11 +24,14 @@
         <div id="header" class="clearfix">
             <div id="company-name" class="pull-left">
                 {% if lang == 'cn' %} <a href="/cn/"> {% else %} <a href="/jp/"> {% endif %}<img src="/static/img/logo.png" alt="Denchi"></img></a><br/>
-                {% if lang == 'cn' %} <a href="/cn/">传智企业重组 {% else %} <a href="/jp/">伝智トレーニング {% endif %}</a>
+                {% if lang == 'cn' %} <a href="/cn/">传智企业重组 {% else %} <a href="/jp/">伝智企業再編 {% endif %}</a>
             </div>
             <p id="language" class="pull-right">
                 <span class="badge {% if lang == 'cn' %}badge-success{%- endif -%}"><a href="/cn/{% if site %}{{ site }}/{%- endif -%}">中文</a></span>
                 <span class="badge {% if lang == 'jp' %}badge-success{%- endif -%}"><a href="/jp/{% if site %}{{ site }}/{%- endif -%}">日本語</a></span>
+                <br />
+                <span class="badge badge-info">{% if lang == 'cn' %}<a href="http://denchi.cn/">传智咨询</a>{%- else -%}<a href="http://denchi.cn/jp/">伝智コンサルティング</a>{%- endif -%}</span>
+                <span class="badge badge-info">{% if lang == 'cn' %}<a href="http://learn.denchi.cn/">传智培训</a>{%- else -%}<a href="http://learn.denchi.cn/jp/">伝智トレーニング</a>{%- endif -%}</span>
             </p>
         </div>
 

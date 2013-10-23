@@ -11,7 +11,7 @@ h1 a:hover {text-decoration: none;}
     letter-spacing: 6px;
     text-decoration: none;
 }
-#language {margin: 5px;}
+#language {margin: 5px; text-align: right;}
 #language a {color: #fff;}
 
 .navbar {margin-bottom: -2px;}

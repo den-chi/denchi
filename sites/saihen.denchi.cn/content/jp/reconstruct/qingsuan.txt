@@ -4,7 +4,7 @@ title: 清算
 
 ##主要法規##
 
-[中華人民共和国会社法](/jp/reconstruct/qiyefa)
+[中華人民共和国公司法](/jp/reconstruct/qiyefa)
 [中華人民共和国会社登記管理条例](/jp/reconstruct/guanlitiaoli)
 [中華人民共和国企業破産法](/jp/reconstruct/pochanfa)
 [中华人民共和国外资企业法](/jp/reconstruct/waiziqiyefa)
